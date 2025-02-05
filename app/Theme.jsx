@@ -1,4 +1,5 @@
 "use client";
+import { Eclipse } from "lucide-react";
 import React, { useState } from "react";
 
 export default function Theme({ setTheme }) {
@@ -46,11 +47,12 @@ export default function Theme({ setTheme }) {
     <div
       style={{
         height: "10vh",
+        zIndex: "10000",
         position: "absolute",
         display: "flex",
         width: "100%",
         // alignItems: "right",
-        justifyContent: "right",
+        justifyContent: "left",
         gap: "30px",
       }}
     >
@@ -58,7 +60,7 @@ export default function Theme({ setTheme }) {
         className="btn btn-active btn-primary"
         onClick={() => changeTheme(Math.min(num + 1, themes.length - 1))}
       >
-        {themes[num]}
+        <Eclipse></Eclipse>
       </button>
     </div>
   );
